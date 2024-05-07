@@ -8,8 +8,8 @@ pipeline {
                 // Your build steps here
                 container('cypress') {
                 sh 'npm install'
-                sh 'npm start'
-                sh 'npm run local:open'
+                sh 'nohup npm start &'
+                sh 'npm run local:run'
                 }
             }
         }
