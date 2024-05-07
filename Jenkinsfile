@@ -7,10 +7,9 @@ pipeline {
             steps {
                 // Your build steps here
                 container('cypress') {
-                sh 'npm ci'
-                sh 'npm run cy:verify'
-                sh 'nohup npm run start &'
-                sh 'sh "npm run e2e:record:parallel"'
+                sh 'npm install'
+                sh 'npm start'
+                sh 'npm run local:open'
                 }
             }
         }
