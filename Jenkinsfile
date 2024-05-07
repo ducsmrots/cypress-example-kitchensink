@@ -7,9 +7,10 @@ pipeline {
             steps {
                 // Your build steps here
                 container('cypress') {
-                sh 'npm install'
+                sh 'npm install cypress-multi-reporters --save-dev'
                 sh 'nohup npm start &'
                 sh 'npm run local:run'
+                sh 'ls -lrt'
                 }
             }
         }
