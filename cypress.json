@@ -1,7 +1,0 @@
-{
-    "video": true,
-    "videosFolder": "cypress/videos",
-    "screenshotOnRunFailure": true,
-    "screenshotsFolder": "cypress/screenshots"
-}
-  
