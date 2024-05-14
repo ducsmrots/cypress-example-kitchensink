@@ -20,8 +20,13 @@ pipeline {
     }
     post {
         always {
-            // Clean up steps here, if necessary
-            echo 'Pipeline completed.'
+            container('cypress') {
+                // Archive test artifacts
+                archiveArtifacts artifacts: 'cypress/screenshots/**/*.*, cypress/videos/**/*.*', allowEmptyArchive: true
+
+                // Clean up steps here, if necessary
+                echo 'Pipeline completed.'
+            }
         }
     }
 }
