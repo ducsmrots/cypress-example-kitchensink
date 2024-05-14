@@ -11,7 +11,7 @@ pipeline {
                     sh 'npm install cypress-multi-reporters --save-dev'
                     sh 'nohup npm start &'
                     sh 'npm run local:run'
-                    sh 'ls -lrt'
+                    sh 'ls -lRt'
                     }
                 }
             }
